@@ -59,13 +59,7 @@ public class PLANEDIV
 				st.add(str.substring(0, str.indexOf(",")));
 
 			}
-			/*ArrayList<Integer> count = new ArrayList<Integer>();
-			for (String temp : y) 
-			{
-				count.add(Collections.frequency(st, temp));
-
-			}
-			out.println(Collections.max(count));*/
+			
 			int maxcount=0,tempcount=0;
 
 			String tempstring=st.get(0);
