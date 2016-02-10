@@ -7,34 +7,47 @@ import myutil.Reader;
 
 public class CHEFFILT
 {
+	public static final int mod =1000000007;
 
 	public static void main(String[] args)throws IOException
 	{
 		int T;
 		Reader.init(System.in);
 		T=Reader.nextInt();
+		int i,j;
 		while(T-->0)
 		{
-			String s;
-			s=Reader.next();
-			int S=string_to_binary(s, 'w');
+
+			int S=string_to_binary(Reader.next(), 'w');
 			int N;
 			N=Reader.nextInt();
-			for(int i=0;i<N;i++)
-			{
-				
-				
-				
-				
-					
-				
+			int A[]=new int[N];
+			
+			for(i=0;i<N;i++)
+				A[i]=string_to_binary(Reader.next(), '+');
+			
+			int dp[][]=new int[N][1024];
+			dp[0][0]=1;
+
+			for(i=1;i<N;i++){
+				int a = A[i-1];
+				for(j=0;j<1024;j++){
+					dp[i][j] = dp[i-1][j] + dp[i-1][j^a];
+					if(dp[i][j]>=mod)
+						dp[i][j] -= mod;
+				}
 			}
+
+
+
+
+
 		}
-		
-		
-		
+
+
+
 	}
-	
+
 	private static int string_to_binary(String s,char a)
 	{
 		char []t= s.toCharArray();

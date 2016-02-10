@@ -10,9 +10,9 @@ public class MoveDuplicates {
 	{
 		PrintWriter out = new PrintWriter(System.out);
 		Date myDate = new Date();
-		
+
 		String ymd =new SimpleDateFormat("yyyyMMdd").format(myDate);
-		
+
 		String str="x";
 		Reader.init(System.in);
 		while(!str.equals("end"))
@@ -20,17 +20,18 @@ public class MoveDuplicates {
 			str=Reader.next();
 			str.replace('.', '_');
 			if (!str.equals("end"))
-				out.println("mv"+" "+ymd+"*"+str.replace('.', '_')+"*"+".pkg archive");
-			
-			
-			
+				//out.println("mv"+" "+ymd+"*"+str.replace('.', '_')+"*"+".pkg archive");
+				out.println("ls "+" "+ymd+"*"+str+"*"+".dat");
+
+
+
 		}
-		
-			
+
+
 		out.flush();
 		out.close();
-				
-		
+
+
 
 	}
 
