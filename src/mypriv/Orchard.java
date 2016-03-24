@@ -2,12 +2,16 @@ package mypriv;
 
 import java.io.*;
 import java.util.*;
+import java.lang.*;
 
 public class Orchard {
 
 	public static void main(String[] args)throws IOException
 	{
-		String s,time_stamp,batch_stamp,temp="";
+		String s,time_stamp,batch_stamp;
+		StringBuilder temp = new StringBuilder();
+
+
 		PrintWriter out1=new PrintWriter("remove_from_dqworking.sh","UTF-8");
 		PrintWriter out2=new PrintWriter("copy_dat_meta_ctl.sh","UTF-8");
 		PrintWriter out3=new PrintWriter("move_pkg_to_inbox.sh","UTF-8");
@@ -51,11 +55,7 @@ public class Orchard {
 			
 		}
 		
-		for (String st : files_in_archive_not_in_hive)
-		{
-			temp=temp+mp.get(st)+"dat"+"|";
-			
-		}
+		
 		
 		
 		for (String st : files_in_archive) 
@@ -63,6 +63,21 @@ public class Orchard {
 			if(!files_in_hive.contains(st))
 				files_in_archive_not_in_hive.add(st);
 		}
+		
+		if(files_in_archive_not_in_hive.isEmpty())
+		{
+			System.out.println("total files published in hive="+files_in_hive.size());
+			System.out.println("all files arrived in inbox are published in hive");
+			System.exit(0);
+		}
+
+		for (String st : files_in_archive_not_in_hive)
+		{
+			temp=temp.append(mp.get(st)).append("dat|");
+			
+		}
+		String tempfinal=temp.toString();
+
 		
 		out1.println("#!/bin/bash");
 		
@@ -73,6 +88,8 @@ public class Orchard {
 		out3.println("cd /datafabric/p_inbound/optum/optumrx/orx001/inbox/archive");
 		
 		out4.println("#!/bin/bash");
+
+		
 		
 		
 		
@@ -80,7 +97,7 @@ public class Orchard {
 		{
 			
 			out4.println("cd /opt/prd/log/WORKFLOW/CommonIntakeWorkflow/"+st);
-			out4.println("egrep -Hwl '"+temp.substring(0, temp.length()-2)+"' CommonIntakeWorkflow_"+st+".log");
+			out4.println("egrep -Hwl '"+tempfinal.substring(0, tempfinal.length()-1)+"' CommonIntakeWorkflow_"+st+".log");
 		}
 		
 		for (String st : files_in_archive_not_in_hive)
@@ -94,7 +111,7 @@ public class Orchard {
 		out1.println("exit");
 		out2.println("exit");
 		out3.println("exit");
-		out4.println("end_of_instances");
+		out4.println("echo end_of_instances");
 		out4.println("exit");
 		
 		out1.flush();

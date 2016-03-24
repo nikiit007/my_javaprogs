@@ -1,4 +1,4 @@
-package geeks_for_geeks;
+package geeks_for_geeks.dynamic_programming;
 
 import java.io.IOException;
 
