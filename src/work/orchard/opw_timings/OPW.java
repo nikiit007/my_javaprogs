@@ -1,6 +1,5 @@
 package work.orchard.opw_timings;
 
-
 import java.io.*;
 import java.util.*;
 import java.lang.*;
@@ -189,30 +188,32 @@ public class OPW
 			String start_date = tokens[1].trim();
 			String end_date = tokens[2].trim();
 			String source_table = br2.readLine();
+				
+			
 			if(mp.containsKey(source_table))
 			{
-				if (mp.get(source_table).equals("ORX_INTK_5")){ORX_INTK_5.start_date_ts.add(start_date); ORX_INTK_5.end_date_ts.add(end_date);}
-				else if (mp.get(source_table).equals("ORX_INTK_6")){ORX_INTK_6.start_date_ts.add(start_date); ORX_INTK_6.end_date_ts.add(end_date);}
-				else if (mp.get(source_table).equals("ORX_INTK_7")){ ORX_INTK_7.start_date_ts.add(start_date); ORX_INTK_7.end_date_ts.add(end_date);}
-				else if (mp.get(source_table).equals("ORX_INTK_8")){ ORX_INTK_8.start_date_ts.add(start_date); ORX_INTK_8.end_date_ts.add(end_date);}
-				else if (mp.get(source_table).equals("ORX_INTK_9")){ ORX_INTK_9.start_date_ts.add(start_date); ORX_INTK_9.end_date_ts.add(end_date);}
-				else if (mp.get(source_table).equals("ORX_INTK_10")){ ORX_INTK_10.start_date_ts.add(start_date); ORX_INTK_10.end_date_ts.add(end_date);}
-				else if (mp.get(source_table).equals("ORX_INTK_11")){ ORX_INTK_11.start_date_ts.add(start_date); ORX_INTK_11.end_date_ts.add(end_date);}
-				else if (mp.get(source_table).equals("ORX_INTK_12")){ ORX_INTK_12.start_date_ts.add(start_date); ORX_INTK_12.end_date_ts.add(end_date);}
-				else if (mp.get(source_table).equals("ORX_INTK_13")){ ORX_INTK_13.start_date_ts.add(start_date); ORX_INTK_13.end_date_ts.add(end_date);}
-				else if (mp.get(source_table).equals("ORX_INTK_18")){ ORX_INTK_18.start_date_ts.add(start_date); ORX_INTK_18.end_date_ts.add(end_date);}
-				else if (mp.get(source_table).equals("ORX_INTK_19")){ ORX_INTK_19.start_date_ts.add(start_date); ORX_INTK_19.end_date_ts.add(end_date);}
-				else if (mp.get(source_table).equals("ORX_INTK_20")){ ORX_INTK_20.start_date_ts.add(start_date); ORX_INTK_20.end_date_ts.add(end_date);}
-				else if (mp.get(source_table).equals("ORX_INTK_21")){ ORX_INTK_21.start_date_ts.add(start_date); ORX_INTK_21.end_date_ts.add(end_date);}
-				else if (mp.get(source_table).equals("ORX_INTK_22")){ ORX_INTK_22.start_date_ts.add(start_date); ORX_INTK_22.end_date_ts.add(end_date);}
-				else if (mp.get(source_table).equals("ORX_INTK_23")){ ORX_INTK_23.start_date_ts.add(start_date); ORX_INTK_23.end_date_ts.add(end_date);}
-				else if (mp.get(source_table).equals("ORX_INTK_24")){ ORX_INTK_24.start_date_ts.add(start_date); ORX_INTK_24.end_date_ts.add(end_date);}
-				else if (mp.get(source_table).equals("ORX_INTK_14")){ ORX_INTK_14.start_date_ts.add(start_date); ORX_INTK_14.end_date_ts.add(end_date);}
-				else if (mp.get(source_table).equals("ORX_INTK_15")){ ORX_INTK_15.start_date_ts.add(start_date); ORX_INTK_15.end_date_ts.add(end_date);}
-				else if (mp.get(source_table).equals("ORX_INTK_27")){ ORX_INTK_27.start_date_ts.add(start_date); ORX_INTK_27.end_date_ts.add(end_date);}
-				else if (mp.get(source_table).equals("ORX_INTK_28")){ ORX_INTK_28.start_date_ts.add(start_date); ORX_INTK_28.end_date_ts.add(end_date);}
-				else if (mp.get(source_table).equals("ORX_INTK_29")){ ORX_INTK_29.start_date_ts.add(start_date); ORX_INTK_29.end_date_ts.add(end_date);}
-				else if (mp.get(source_table).equals("ORX_INTK_30")){ ORX_INTK_30.start_date_ts.add(start_date); ORX_INTK_30.end_date_ts.add(end_date);}
+			if (mp.get(source_table).equals("ORX_INTK_5")){ORX_INTK_5.start_date_ts.add(start_date); ORX_INTK_5.end_date_ts.add(end_date);}
+			else if (mp.get(source_table).equals("ORX_INTK_6")){ORX_INTK_6.start_date_ts.add(start_date); ORX_INTK_6.end_date_ts.add(end_date);}
+			else if (mp.get(source_table).equals("ORX_INTK_7")){ ORX_INTK_7.start_date_ts.add(start_date); ORX_INTK_7.end_date_ts.add(end_date);}
+			else if (mp.get(source_table).equals("ORX_INTK_8")){ ORX_INTK_8.start_date_ts.add(start_date); ORX_INTK_8.end_date_ts.add(end_date);}
+			else if (mp.get(source_table).equals("ORX_INTK_9")){ ORX_INTK_9.start_date_ts.add(start_date); ORX_INTK_9.end_date_ts.add(end_date);}
+			else if (mp.get(source_table).equals("ORX_INTK_10")){ ORX_INTK_10.start_date_ts.add(start_date); ORX_INTK_10.end_date_ts.add(end_date);}
+			else if (mp.get(source_table).equals("ORX_INTK_11")){ ORX_INTK_11.start_date_ts.add(start_date); ORX_INTK_11.end_date_ts.add(end_date);}
+			else if (mp.get(source_table).equals("ORX_INTK_12")){ ORX_INTK_12.start_date_ts.add(start_date); ORX_INTK_12.end_date_ts.add(end_date);}
+			else if (mp.get(source_table).equals("ORX_INTK_13")){ ORX_INTK_13.start_date_ts.add(start_date); ORX_INTK_13.end_date_ts.add(end_date);}
+			else if (mp.get(source_table).equals("ORX_INTK_18")){ ORX_INTK_18.start_date_ts.add(start_date); ORX_INTK_18.end_date_ts.add(end_date);}
+			else if (mp.get(source_table).equals("ORX_INTK_19")){ ORX_INTK_19.start_date_ts.add(start_date); ORX_INTK_19.end_date_ts.add(end_date);}
+			else if (mp.get(source_table).equals("ORX_INTK_20")){ ORX_INTK_20.start_date_ts.add(start_date); ORX_INTK_20.end_date_ts.add(end_date);}
+			else if (mp.get(source_table).equals("ORX_INTK_21")){ ORX_INTK_21.start_date_ts.add(start_date); ORX_INTK_21.end_date_ts.add(end_date);}
+			else if (mp.get(source_table).equals("ORX_INTK_22")){ ORX_INTK_22.start_date_ts.add(start_date); ORX_INTK_22.end_date_ts.add(end_date);}
+			else if (mp.get(source_table).equals("ORX_INTK_23")){ ORX_INTK_23.start_date_ts.add(start_date); ORX_INTK_23.end_date_ts.add(end_date);}
+			else if (mp.get(source_table).equals("ORX_INTK_24")){ ORX_INTK_24.start_date_ts.add(start_date); ORX_INTK_24.end_date_ts.add(end_date);}
+			else if (mp.get(source_table).equals("ORX_INTK_14")){ ORX_INTK_14.start_date_ts.add(start_date); ORX_INTK_14.end_date_ts.add(end_date);}
+			else if (mp.get(source_table).equals("ORX_INTK_15")){ ORX_INTK_15.start_date_ts.add(start_date); ORX_INTK_15.end_date_ts.add(end_date);}
+			else if (mp.get(source_table).equals("ORX_INTK_27")){ ORX_INTK_27.start_date_ts.add(start_date); ORX_INTK_27.end_date_ts.add(end_date);}
+			else if (mp.get(source_table).equals("ORX_INTK_28")){ ORX_INTK_28.start_date_ts.add(start_date); ORX_INTK_28.end_date_ts.add(end_date);}
+			else if (mp.get(source_table).equals("ORX_INTK_29")){ ORX_INTK_29.start_date_ts.add(start_date); ORX_INTK_29.end_date_ts.add(end_date);}
+			else if (mp.get(source_table).equals("ORX_INTK_30")){ ORX_INTK_30.start_date_ts.add(start_date); ORX_INTK_30.end_date_ts.add(end_date);}
 			}
 
 
@@ -222,28 +223,29 @@ public class OPW
 
 		}
 
-		if (!ORX_INTK_5.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_5 "+Collections.min(ORX_INTK_5.start_date_ts)+" "+Collections.max(ORX_INTK_5.end_date_ts));
-		if (!ORX_INTK_6.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_6 "+Collections.min(ORX_INTK_6.start_date_ts)+" "+Collections.max(ORX_INTK_6.end_date_ts));
-		if (!ORX_INTK_7.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_7 "+Collections.min(ORX_INTK_7.start_date_ts)+" "+Collections.max(ORX_INTK_7.end_date_ts));
-		if (!ORX_INTK_8.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_8 "+Collections.min(ORX_INTK_8.start_date_ts)+" "+Collections.max(ORX_INTK_8.end_date_ts));
-		if (!ORX_INTK_9.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_9 "+Collections.min(ORX_INTK_9.start_date_ts)+" "+Collections.max(ORX_INTK_9.end_date_ts));
-		if (!ORX_INTK_10.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_10 "+Collections.min(ORX_INTK_10.start_date_ts)+" "+Collections.max(ORX_INTK_10.end_date_ts));
-		if (!ORX_INTK_11.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_11 "+Collections.min(ORX_INTK_11.start_date_ts)+" "+Collections.max(ORX_INTK_11.end_date_ts));
-		if (!ORX_INTK_12.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_12 "+Collections.min(ORX_INTK_12.start_date_ts)+" "+Collections.max(ORX_INTK_12.end_date_ts));
-		if (!ORX_INTK_13.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_13 "+Collections.min(ORX_INTK_13.start_date_ts)+" "+Collections.max(ORX_INTK_13.end_date_ts));
-		if (!ORX_INTK_14.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_14 "+Collections.min(ORX_INTK_14.start_date_ts)+" "+Collections.max(ORX_INTK_14.end_date_ts));
-		if (!ORX_INTK_15.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_15 "+Collections.min(ORX_INTK_15.start_date_ts)+" "+Collections.max(ORX_INTK_15.end_date_ts));
-		if (!ORX_INTK_18.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_18 "+Collections.min(ORX_INTK_18.start_date_ts)+" "+Collections.max(ORX_INTK_18.end_date_ts));
-		if (!ORX_INTK_19.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_19 "+Collections.min(ORX_INTK_19.start_date_ts)+" "+Collections.max(ORX_INTK_19.end_date_ts));
-		if (!ORX_INTK_20.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_20 "+Collections.min(ORX_INTK_20.start_date_ts)+" "+Collections.max(ORX_INTK_20.end_date_ts));
-		if (!ORX_INTK_21.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_21 "+Collections.min(ORX_INTK_21.start_date_ts)+" "+Collections.max(ORX_INTK_21.end_date_ts));
-		if (!ORX_INTK_22.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_22 "+Collections.min(ORX_INTK_22.start_date_ts)+" "+Collections.max(ORX_INTK_22.end_date_ts));
-		if (!ORX_INTK_23.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_23 "+Collections.min(ORX_INTK_23.start_date_ts)+" "+Collections.max(ORX_INTK_23.end_date_ts));
-		if (!ORX_INTK_24.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_24 "+Collections.min(ORX_INTK_24.start_date_ts)+" "+Collections.max(ORX_INTK_24.end_date_ts));
-		if (!ORX_INTK_27.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_27 "+Collections.min(ORX_INTK_27.start_date_ts)+" "+Collections.max(ORX_INTK_27.end_date_ts));
-		if (!ORX_INTK_28.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_28 "+Collections.min(ORX_INTK_28.start_date_ts)+" "+Collections.max(ORX_INTK_28.end_date_ts));
-		if (!ORX_INTK_29.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_29 "+Collections.min(ORX_INTK_29.start_date_ts)+" "+Collections.max(ORX_INTK_29.end_date_ts));
-		if (!ORX_INTK_30.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_30 "+Collections.min(ORX_INTK_30.start_date_ts)+" "+Collections.max(ORX_INTK_30.end_date_ts));
+        if (!ORX_INTK_5.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_5 "+"<tr><td>"+Collections.min(ORX_INTK_5.start_date_ts)+"</td><td>"+Collections.max(ORX_INTK_5.end_date_ts)+"</td></tr>");
+		if (!ORX_INTK_6.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_6 "+"<tr><td>"+Collections.min(ORX_INTK_6.start_date_ts)+"</td><td>"+Collections.max(ORX_INTK_6.end_date_ts)+"</td></tr>");
+		if (!ORX_INTK_7.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_7 "+"<tr><td>"+Collections.min(ORX_INTK_7.start_date_ts)+"</td><td>"+Collections.max(ORX_INTK_7.end_date_ts)+"</td></tr>");
+		if (!ORX_INTK_8.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_8 "+"<tr><td>"+Collections.min(ORX_INTK_8.start_date_ts)+"</td><td>"+Collections.max(ORX_INTK_8.end_date_ts)+"</td></tr>");
+		if (!ORX_INTK_9.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_9 "+"<tr><td>"+Collections.min(ORX_INTK_9.start_date_ts)+"</td><td>"+Collections.max(ORX_INTK_9.end_date_ts)+"</td></tr>");
+		if (!ORX_INTK_10.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_10"+"<tr><td>"+Collections.min(ORX_INTK_10.start_date_ts)+"</td><td>"+Collections.max(ORX_INTK_10.end_date_ts)+"</td></tr>");
+		if (!ORX_INTK_11.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_11"+"<tr><td>"+Collections.min(ORX_INTK_11.start_date_ts)+"</td><td>"+Collections.max(ORX_INTK_11.end_date_ts)+"</td></tr>");
+		if (!ORX_INTK_12.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_12"+"<tr><td>"+Collections.min(ORX_INTK_12.start_date_ts)+"</td><td>"+Collections.max(ORX_INTK_12.end_date_ts)+"</td></tr>");
+		if (!ORX_INTK_13.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_13"+"<tr><td>"+Collections.min(ORX_INTK_13.start_date_ts)+"</td><td>"+Collections.max(ORX_INTK_13.end_date_ts)+"</td></tr>");
+		if (!ORX_INTK_18.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_18"+"<tr><td>"+Collections.min(ORX_INTK_18.start_date_ts)+"</td><td>"+Collections.max(ORX_INTK_18.end_date_ts)+"</td></tr>");
+		if (!ORX_INTK_19.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_19"+"<tr><td>"+Collections.min(ORX_INTK_19.start_date_ts)+"</td><td>"+Collections.max(ORX_INTK_19.end_date_ts)+"</td></tr>");
+		if (!ORX_INTK_20.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_20"+"<tr><td>"+Collections.min(ORX_INTK_20.start_date_ts)+"</td><td>"+Collections.max(ORX_INTK_20.end_date_ts)+"</td></tr>");
+		if (!ORX_INTK_21.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_21"+"<tr><td>"+Collections.min(ORX_INTK_21.start_date_ts)+"</td><td>"+Collections.max(ORX_INTK_21.end_date_ts)+"</td></tr>");
+		if (!ORX_INTK_22.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_22"+"<tr><td>"+Collections.min(ORX_INTK_22.start_date_ts)+"</td><td>"+Collections.max(ORX_INTK_22.end_date_ts)+"</td></tr>");
+		if (!ORX_INTK_23.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_23"+"<tr><td>"+Collections.min(ORX_INTK_23.start_date_ts)+"</td><td>"+Collections.max(ORX_INTK_23.end_date_ts)+"</td></tr>");
+		if (!ORX_INTK_14.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_14"+"<tr><td>"+Collections.min(ORX_INTK_14.start_date_ts)+"</td><td>"+Collections.max(ORX_INTK_14.end_date_ts)+"</td></tr>");
+		if (!ORX_INTK_15.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_15"+"<tr><td>"+Collections.min(ORX_INTK_15.start_date_ts)+"</td><td>"+Collections.max(ORX_INTK_15.end_date_ts)+"</td></tr>");
+		if (!ORX_INTK_24.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_24"+"<tr><td>"+Collections.min(ORX_INTK_24.start_date_ts)+"</td><td>"+Collections.max(ORX_INTK_24.end_date_ts)+"</td></tr>");
+		if (!ORX_INTK_27.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_27"+"<tr><td>"+Collections.min(ORX_INTK_27.start_date_ts)+"</td><td>"+Collections.max(ORX_INTK_27.end_date_ts)+"</td></tr>");
+		if (!ORX_INTK_28.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_28"+"<tr><td>"+Collections.min(ORX_INTK_28.start_date_ts)+"</td><td>"+Collections.max(ORX_INTK_28.end_date_ts)+"</td></tr>");
+		if (!ORX_INTK_29.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_29"+"<tr><td>"+Collections.min(ORX_INTK_29.start_date_ts)+"</td><td>"+Collections.max(ORX_INTK_29.end_date_ts)+"</td></tr>");
+		if (!ORX_INTK_30.start_date_ts.isEmpty())System.out.println("OPW for ORX_INTK_30"+"<tr><td>"+Collections.min(ORX_INTK_30.start_date_ts)+"</td><td>"+Collections.max(ORX_INTK_30.end_date_ts)+"</td></tr>");
+
 
 
 	}
