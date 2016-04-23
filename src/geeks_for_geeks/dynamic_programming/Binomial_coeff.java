@@ -7,7 +7,7 @@ public class Binomial_coeff
 
 	public static void main(String[] args)throws IOException
 	{
-		int n=5;int k=2;
+		
 		System.out.println(calc_coeff(5, 2));
 
 	}

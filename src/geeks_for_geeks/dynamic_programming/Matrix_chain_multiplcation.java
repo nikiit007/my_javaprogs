@@ -1,7 +1,6 @@
 package geeks_for_geeks.dynamic_programming;
 import java.io.*;
-import java.lang.*;
-import java.util.*;
+
 
 public class Matrix_chain_multiplcation 
 {

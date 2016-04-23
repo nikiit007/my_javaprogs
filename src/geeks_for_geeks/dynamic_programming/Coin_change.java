@@ -1,8 +1,7 @@
 package geeks_for_geeks.dynamic_programming;
 
 import java.io.*;
-import java.lang.*;
-import java.util.*;
+
 
 public class Coin_change {
 
