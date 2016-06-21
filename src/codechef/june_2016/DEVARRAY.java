@@ -1,13 +1,42 @@
-package myutil;
-
-
+package codechef.june_2016;
 import java.io.*;
 import java.util.*;
 
 
+public class DEVARRAY 
+{
 
-/** Class for buffered reading int and double values */
-public class Reader {
+	public static void main(String[] args)throws IOException
+	{
+		int N,Q,t;
+		Reader.init(System.in);
+		N=Reader.nextInt();
+		Q=Reader.nextInt();
+		ArrayList<Integer> A=new ArrayList<Integer>();
+		
+		for(int i=0;i<N;i++)
+			A.add(Reader.nextInt());
+		
+		int max_val=Collections.max(A);
+		int min_val=Collections.min(A);
+		
+		while(Q-->0)
+		{
+			t=Reader.nextInt();
+			if(t<=max_val && t>=min_val)
+				System.out.println("Yes");
+			else
+				System.out.println("No");
+		}
+		
+		
+		
+		
+
+	}
+	
+}
+class Reader {
     static BufferedReader reader;
     static StringTokenizer tokenizer;
 
@@ -21,7 +50,7 @@ public class Reader {
     /** get next word */
     public static String next() throws IOException {
         while ( ! tokenizer.hasMoreTokens() ) {
-          
+            //TODO add check for eof if necessary
             tokenizer = new StringTokenizer(
                    reader.readLine() );
         }

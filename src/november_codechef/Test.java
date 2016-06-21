@@ -1,36 +1,29 @@
 
 package november_codechef;
 import java.io.*;
-import java.util.*;
-import myutil.Reader;
-import myutil.Prime;
+
  
- 
- 
- 
-class Test {
+class Test
+{
  
 	public static void main(String[] args) throws IOException
 	{
-		int n,i;
-		Reader.init(System.in);
-		n=Reader.nextInt();
-		for(i=1;i<=n;i++)
+		int T;
+		int N,K,A;
+		T=100;
+		System.out.println(T);
+		while(T-->0)
 		{
-			System.out.print(n/gcd(i,n)+" ");
+			
+			
+				A=-1000+ (int)(Math.random() *(2000));
+				if (A==0) System.out.println(A);
+			
+
 			
 		}
-		System.out.println();
-		
-		
  
  
 	}
-	private static int gcd(int n, int m) 
-	{
-		if (m==0)
-			return n;
-		else 
-			return(gcd(m,n%m));
-	}
+	
 }
